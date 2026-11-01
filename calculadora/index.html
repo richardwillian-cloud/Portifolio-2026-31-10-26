@@ -1,50 +1,189 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minha Página Pessoal</title>
-  <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio de Richard Willian, desenvolvedor front-end com React." />
+  <meta name="theme-color" content="#02030a" />
+  <title>Richard.dev | Desenvolvedor Front-end</title>
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-  <header>
-    <h1>Olá, eu sou Richard</h1>
-    <p>Estudando front-end e JavaScript</p>
-    <button id="botao-tema">Mudar tema</button>
+
+  <!-- ================= CABEÇALHO ================= -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#inicio" class="logo">Richard<span>.dev</span></a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#projetos" class="btn btn--nav" data-section="projetos">Projetos</a>
+        <a href="#sobre" class="btn btn--nav" data-section="sobre">Sobre mim</a>
+        <a href="#contato" class="btn btn--nav" data-section="contato">Contato</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section>
-      <h2>Sobre mim</h2>
-      <p>Estou aprendendo a programar para construir uma carreira na área. Este é meu primeiro projeto no GitHub.</p>
-    </section>
 
-    <section>
-      <h2>Meus gostos</h2>
-      <ul>
-        <li>Gosto de musica e como ela é feita, por isso faço tbm</li>
-        <li> Realmente gosto de programar</li>
+    <!-- ================= INÍCIO ================= -->
+    <section id="inicio" class="hero container">
+      <div class="avatar" id="avatar">
+        <img
+          src="./foto-de-perfil.jpg"
+          alt="Foto de perfil de Richard Willian"
+        />
+        <span class="avatar__fallback" aria-hidden="true">RW</span>
+      </div>
 
+      <h1 class="hero__name">Richard Willian</h1>
+      <p class="hero__role">Desenvolvedor Front-end, uso React</p>
+
+      <ul class="socials">
+        <li>
+          <a class="btn btn--social btn--instagram" href="https://www.instagram.com/rdw7z" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            <span>Instagram</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="btn btn--social btn--github" href="https://github.com/richardwillian-cloud" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            <span>GitHub</span>
+          </a>
+        </li>
+
+        <li>
+          <a class="btn btn--social btn--linkedin" href="http://linkedin.com/in/richard-willian-831502448/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <span>LinkedIn</span>
+          </a>
+        </li>
       </ul>
     </section>
 
-    <section>
-      <h2>Contador de estudos</h2>
-      <p>Dias que estudei: <strong id="contador">0</strong></p>
-      <button id="botao-estudei">Estudei hoje!</button>
+    <!-- ================= PROJETOS ================= -->
+    <section id="projetos" class="section container reveal">
+      <h2 class="section__title">Projetos</h2>
+      <p class="section__subtitle">Os projetos entram aqui conforme forem publicados.</p>
+
+      <div class="projects">
+
+        <!-- Slot 1 -->
+        <article class="card card--slot">
+          <div class="card__thumb"><span>01</span></div>
+          <h3>Projeto em breve</h3>
+          <p>Espaço reservado para o primeiro projeto.</p>
+        </article>
+
+        <!-- Slot 2 -->
+        <article class="card card--slot">
+          <div class="card__thumb"><span>02</span></div>
+          <h3>Projeto em breve</h3>
+          <p>Espaço reservado para o segundo projeto.</p>
+        </article>
+
+        <!-- Slot 3 -->
+        <article class="card card--slot">
+          <div class="card__thumb"><span>03</span></div>
+          <h3>Projeto em breve</h3>
+          <p>Espaço reservado para o terceiro projeto.</p>
+        </article>
+
+      </div>
     </section>
 
-    <section>
-      <h2>Links</h2>
-      <a href="https://github.com/richardwillian-cloud" target="_blank">Meu GitHub</a>
+    <!-- ================= SOBRE MIM ================= -->
+    <section id="sobre" class="section container reveal">
+      <h2 class="section__title">Sobre mim</h2>
+
+      <div class="about">
+
+        <div class="panel">
+          <h3>Perfil</h3>
+          <p>
+            Desenvolvedor front-end focado em criar interfaces limpas, responsivas e fáceis de usar.
+            Trabalho com React e estou em evolução constante, estudando e construindo na prática.
+          </p>
+        </div>
+
+        <div class="panel">
+          <h3>Hard skills</h3>
+          <ul class="chips">
+            <li>HTML5 semântico</li>
+            <li>CSS3 · Flexbox e Grid</li>
+            <li>JavaScript ES6+</li>
+            <li>React</li>
+            <li>Design responsivo</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Stack e ferramentas</h3>
+          <ul class="chips">
+            <li>React</li>
+            <li>JavaScript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Git</li>
+            <li>GitHub</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h3>Qualidades</h3>
+          <ul class="qualities">
+            <li>Interfaces responsivas, do celular ao desktop</li>
+            <li>Código organizado e legível</li>
+            <li>Atenção aos detalhes visuais</li>
+            <li>Aprendizado contínuo e foco em resultado</li>
+          </ul>
+        </div>
+
+      </div>
     </section>
-  </main>
 
-  <footer>
-    <p>Feito por mim, aprendendo passo a passo.</p>
-  </footer>
+    <!-- ================= CONTATO ================= -->
+<section id="contato" class="section container reveal">
+  <h2 class="section__title">Contato</h2>
 
-  <script src="script.js"></script>
+  <div class="contact">
+    <p class="contact__text">
+      Aberto a colaborações em front-end e a projetos em conjunto.
+    </p>
+
+    <a class="btn btn--email" href="mailto:richardwillian443@gmail.com">
+      
+      <span>Enviar e-mail</span>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>© <span id="ano"></span> Richard.dev · Todos os direitos reservados</p>
+</footer>
+
+<script src="script.js"></script>
+
+  <!--
+    MODELO PARA QUANDO TIVER UM PROJETO:
+
+    <article class="card">
+      <div class="card__thumb">
+        <img src="assets/projeto1.jpg" alt="Projeto 1" />
+      </div>
+
+      <h3>Nome do projeto</h3>
+      <p>Descrição curta do que ele faz.</p>
+
+      <div class="card__links">
+        <a class="btn btn--small" href="LINK_DO_SITE" target="_blank" rel="noopener noreferrer">Ver online</a>
+        <a class="btn btn--small" href="LINK_DO_GITHUB" target="_blank" rel="noopener noreferrer">Código</a>
+      </div>
+    </article>
+  -->
+
 </body>
 </html>
